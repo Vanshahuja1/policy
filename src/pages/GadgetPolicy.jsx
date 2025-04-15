@@ -1,15 +1,26 @@
-import PolicyPage from '../components/PolicyPage';
-
-const content = [
-  "Company-provided gadgets are meant to ensure productivity, security, and responsible use.",
-  "Eligibility: Employees who have completed 9 months (6 months + 3 months probation) and are L1 grade.",
-  "Passwords: All new passwords must be shared with the IT department.",
-  "Return of Gadgets: Must return in same condition or with same CL number, or compensate for damages.",
-  "Return Policy: Return gadgets on employment termination or upon company request."
-];
-
 function GadgetPolicy() {
-  return <PolicyPage title="Gadget Policy" content={content} />;
+  const content = [
+    { title: "Purpose", text: "Company-provided gadgets (including but not limited to laptops, smartphones, tablets, and other electronic devices) are issued to ensure productivity, security, and responsible use of company resources." },
+    { title: "Eligibility", text: "Employees must complete a total of 9 months (6 months of service + 3 months probation) and be in L1 grade to be eligible for company gadgets." },
+    { title: "Security Compliance", text: "All new passwords for company-provided devices must be shared with the IT department in adherence to security policies." },
+    { title: "Return of Gadgets", text: "All company-provided gadgets must be returned upon termination of employment or upon request by the company." },
+    { title: "Condition of Return", text: "Gadgets must be returned in the same condition or with the same CL number as received. Any damage must be compensated by the employee." }
+  ];
+
+  return (
+    <div>
+      <h2>Gadget Policy</h2>
+      <ul>
+        {content.map((item, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <strong>{item.title}:</strong> 
+            <p>{item.text}</p>
+          </li>
+        ))}
+      </ul>
+      <p>Employee Name: _________ &nbsp;&nbsp;&nbsp; Employee Signature: _________ &nbsp;&nbsp;&nbsp; Date: _____</p>
+    </div>
+  );
 }
 
 export default GadgetPolicy;

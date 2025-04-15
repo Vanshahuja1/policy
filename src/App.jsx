@@ -23,6 +23,7 @@ function App() {
             <Route path="/gadget" element={<GadgetPolicy />} />
             <Route path="/leave" element={<LeavePolicy />} />
           </Routes>
+          
         </main>
       </div>
     

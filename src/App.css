@@ -1,112 +1,96 @@
-/* General App Styling */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  color: #222;
+/* RESET & BASE */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  color: #1f2937;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* WRAPPER */
 .app {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
 }
 
-/* Header Section */
+/* HEADER */
 .header {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
-  background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-  border-radius: 0 0 12px 12px;
-}
-
-.logo {
-  width: 120px;
-  display: block;
-  margin: 0 auto 1rem auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
   color: #e60000;
-  margin: 0.5rem 0 1rem 0;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
-/* Navigation */
+.header h2 {
+  font-size: 1.5rem;
+  color: #4b5563;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 nav a {
-  text-decoration: none;
+  background-color: #f1f5f9;
+  color: #111827;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   font-weight: 600;
-  color: #333;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 nav a:hover {
   background-color: #e60000;
-  color: white;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(230, 0, 0, 0.25);
 }
 
-/* Main Content */
+/* MAIN */
 main {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-  margin-top: 1.5rem;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
 }
 
-h1 {
-  color: #e60000;
-}
-h2 {
-  color: #e60000;
-  margin-bottom: 1rem;
-}
-h3 {
-  color: #e60000;
-  margin-bottom: 1rem;
-}
-/* Optional: Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .logo {
-    width: 90px;
-  }
-
-  .app {
-    padding: 1rem;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-}
+/* POLICY CONTENT */
 .policy-page {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  line-height: 1.6;
+  padding: 1rem 0;
 }
 
 .policy-page h2 {
+  font-size: 2rem;
   color: #e60000;
-  font-size: 1.75rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .policy-list {
@@ -116,6 +100,35 @@ h3 {
 
 .policy-list li {
   margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+
+
+/* HEADINGS */
+h1, h2, h3 {
+  color: #e60000;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header h2 {
+    font-size: 1.25rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
 }
