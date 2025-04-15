@@ -1,38 +1,121 @@
-.App {
+/* General App Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+.header {
   text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 0 0 12px 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-size: 2rem;
+  color: #e60000;
+  margin: 0.5rem 0 1rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navigation */
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #e60000;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main Content */
+main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  color: #e60000;
+}
+h2 {
+  color: #e60000;
+  margin-bottom: 1rem;
+}
+h3 {
+  color: #e60000;
+  margin-bottom: 1rem;
+}
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo {
+    width: 90px;
   }
+
+  .app {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+}
+.policy-page {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.policy-page h2 {
+  color: #e60000;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
 }
